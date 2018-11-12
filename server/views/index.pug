@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title= title
+
+    link(rel="stylesheet", href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+
+
+
+  body
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer
+        header.mdl-layout__header
+            .mdl-layout__header-row
+                .mdl-layout-spacer
+                button#demo-menu-lower-right.mdl-button.mdl-js-button.mdl-button--icon
+                    i.material-icons more_vert
+                ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect(for='demo-menu-lower-right')
+                    li.mdl-menu__item Log out
+                  
+            
+        .mdl-layout__drawer
+            span.mdl-layout-title 
+                h1.android-logo-image U-Pay
+                    p Powered by Unionbank
+            nav.mdl-navigation
+                a.mdl-navigation__link(href='') Overview
+                a.mdl-navigation__link(href='') Merchant
+                a.mdl-navigation__link(href='') Transaction
+                a.mdl-navigation__link(href='') History
+                a.mdl-navigation__link(href='') Settlement
+                a.mdl-navigation__link(href='') Reconciliation
+        main.mdl-layout__content
+            .page-content
+    //- main(role="main" class="container")
+    //-   h1 Welcome to Card - The Note Taking App
+    //-   button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent Button
+
+
+script(src="https://code.getmdl.io/1.3.0/material.min.js")  
