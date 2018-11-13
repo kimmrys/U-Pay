@@ -1,0 +1,24 @@
+.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer
+    header.mdl-layout__header
+        .mdl-layout__header-row
+            .mdl-layout-spacer
+            span UPay@unionbank.com
+            button#demo-menu-lower-right.mdl-button.mdl-js-button.mdl-button--icon
+                i.material-icons more_vert
+            ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect(for='demo-menu-lower-right')
+                li.mdl-menu__item Log out
+                
+        
+    .mdl-layout__drawer
+        span.mdl-layout-title 
+            h1.android-logo-image U-Pay
+                p Powered by 
+                    img.unionbank(style="width:180px;" src="/unionBank.png", alt="")
+        nav.mdl-navigation
+            a.mdl-navigation__link(href='/merchant') Merchant
+            a.mdl-navigation__link(href='') Transaction
+            a.mdl-navigation__link(href='') History
+            a.mdl-navigation__link(href='') Settlement
+            a.mdl-navigation__link(href='') Reconciliation
+    main.mdl-layout__content
+        .page-content
