@@ -5,6 +5,11 @@ const request = require('request');
 
 router.use(cookieParser());
 
+router.get('/qr', (req, res) => {
+    let viewModel = req.viewModel;
+    res.render('sample.pug', viewModel);
+});
+
 router.get('/', (req, res) => {
     let merchantId = req.cookies['merchantId'];
     if(merchantId){
