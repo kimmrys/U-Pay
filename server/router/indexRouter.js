@@ -1,11 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const cookieParser = require('cookie-parser');
+const request = require('request');
 
 router.use(cookieParser());
 
 router.get('/', (req, res) => {
-    if(req.cookies['merchantId']){
+    let merchantId = req.cookies['merchantId'];
+    if(merchantId){
+        request(`http://localhost:3001/api/${merchantId}`, function(error, response, body) {
+            console.log('error', error);
+            console.log('statusCode:', response && response.statusCode);
+
+            // merchant data
+            const merchant = body;
+        })
         let viewModel = req.viewModel;
         res.render('index.pug', viewModel);
     }else{
