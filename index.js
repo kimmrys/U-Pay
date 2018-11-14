@@ -6,7 +6,6 @@ const port = 3000;
 const indexRouter = require('./server/router/indexRouter');
 const merchantRouter = require('./server/router/merchantRouter');
 const transactionRouter = require('./server/router/transactionRouter');
-const historyRouter = require('./server/router/historyRouter');
 const refundRouter = require('./server/router/refundRouter');
 
 const showPayment = require('./server/api/showPayment');
@@ -35,7 +34,6 @@ app.use('/',(req, res, next) => {
 app.use('/', indexRouter);
 app.use('/merchant', merchantRouter);
 app.use('/transaction', transactionRouter);
-app.use('/history', historyRouter);
 app.use('/refund', refundRouter);
 
 app.use('/api', showPayment);

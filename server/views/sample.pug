@@ -4,12 +4,29 @@ html(lang="en")
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
-  body
-    main#showQr
-      input(v-model="amount" placeholder="edit me")
-      button(v-on:click="showQr") Show QR
-      div(v-html="qrCode")
+    link(rel="stylesheet", href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    //- link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css")
+    //- link(rel="stylesheet", href="./style.css" type="text/css")
 
+  body
+    #showQr.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer
+      .mdl-layout__drawer
+          span.mdl-layout-title 
+              h2.android-logo-image U-Pay
+                  p Powered by 
+                      img.unionbank(style="width:180px;" src="/unionBank.png", alt="")
+          nav.mdl-navigation
+      main.mdl-layout__content
+          .page-content
+  
+            input(v-model="amount" placeholder="edit me")
+            button(v-on:click="showQr") Show QR
+            div(style="margin: auto; width: 50%; padding: 10px;" v-html="qrCode")
+              
+
+
+script(src="https://code.getmdl.io/1.3.0/material.min.js")  
 script(src="./script/axios.min.js")
 script(src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js")
 script(src="./qrcode.js")
