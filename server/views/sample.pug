@@ -5,16 +5,15 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
   body
-    #placeHolder
+    main#showQr
+      input(v-model="amount" placeholder="edit me")
+      button(v-on:click="showQr") Show QR
+      div(v-html="qrCode")
 
+script(src="./script/axios.min.js")
+script(src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js")
 script(src="./qrcode.js")
+script(src="./script/showqr.js")
 
-script.
-    var typeNumber = 4;
-    var errorCorrectionLevel = 'L';
-    var qr = qrcode(typeNumber, errorCorrectionLevel);
-    qr.addData('Hi!');
-    qr.make();
-    document.getElementById('placeHolder').innerHTML = qr.createImgTag();
 
         
