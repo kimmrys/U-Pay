@@ -12,32 +12,32 @@ html
  
     script(defer='', src='https://use.fontawesome.com/releases/v5.0.13/js/solid.js', integrity='sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ', crossorigin='anonymous')
     script(defer='', src='https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js', integrity='sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY', crossorigin='anonymous')
+
   body
       .wrapper
         include header.pug
 
         #content
             nav.navbar.navbar-expand-lg.navbar-light.bg-light
-            h2 Refund
+            h2 Summary
 
-            table.table
-             thead
-              tr.text-center
-               th Date/Time
-               th Reference Number
-               th Merchant Name
-               th Amount
-               th Status
-               th Details
-             tbody
-              tr.text-center
-               td 10:00/14/11/18
-               td 1094895986986
-               td Jollibey
-               td 12
-               td Pending
-               td
-                button.btn.btn-secondary() View
+            .row.ml-5.mr-5
+             .col-md-2.col-sm-4.col-xs-6.line-border
+              h6 Total Transactions
+              p 5
+             .col-md-2.col-sm-4.col-xs-6.line-border
+              h6 Total Amount
+              p 500
+             .col-md-2.col-sm-4.col-xs-6.line-border
+              h6 Refunds
+              p 5
+             .col-md-2.col-sm-4.col-xs-6.line-border
+              h6 Refund Amount
+              p 250
+             .col-md-2.col-sm-4.col-xs-6.line-border
+              h6 Net Value
+              p 250
+             
             
 script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
     // Popper.JS
@@ -45,4 +45,3 @@ script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.m
     // Bootstrap JS
 script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossorigin='anonymous')
     
-     
